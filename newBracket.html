@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="utf-8">
+        <title>New Home</title>
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+        <script src="js/preloader.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" href="styles/bracketStyle.css">
+    </head>
+    <body>
+        <header>
+          <nav class="hidden">
+            <div class="nav-wrapper">
+              <a href="#!" class="brand-logo">CDK Global</a>
+              <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-2x"></i></a>
+              <ul class="right hide-on-med-and-down">
+                <li id="homeButton" class="active"><a href="#" onClick="homePage()">Home</a></li>
+                <li id="winnerButton" class=""><a href="#" onClick="viewWin()">Winner</a></li>
+              </ul>
+              <ul class="side-nav" id="slide-out">
+                <li id="homeButtonNav" class="active"><a href="#" onClick="homePage()">Home</a></li>
+                <li id="winnerButtonNav" class=""><a href="#" onClick="viewWin()">Winner</a></li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+        <div class="preloader-background">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-custom-only">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container hidden">
+            <section id="homeScreen" class="visible">
+                <div class="row">
+                    <h2 class="headerSize">Create</h2>
+                    <div class="col s12">
+                        <p id="tournamentName"><a>Tournament Name:</a> 
+                            <input type="text" id="tourName" placeholder="Blank's Singles Tournament">
+                        </p>
+                        <div id="maxPlayers">
+                            <label for="datepicker"><a class="font">Tourney Start Date:</a></label>
+                                <input placeholder="24 August, 1994" type="text" class="datepicker" id="datepicker" name="datepicker">
+                        </div>
+                        <div id = "generateButton">
+                            <button class="waves-effect waves-light btn cdkColor button" type="button" onClick="createTournament()" id="generate">Generate it!</button>
+                        </div>
+                    </div>
+                    <div id="homeOpen" class="col s6">
+                        <h2 class="headerSize">Open Tournaments</h2>
+                        <div>
+                            <ul id="listOpen"></ul>
+                        </div>
+                    </div>
+                    <div id="homeClosed" class="col s6">
+                        <h2 class="headerSize">In Progress Tournaments</h2>
+                        <div>
+                            <ul id="listClosed"></ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="joinTournamentScreen" class="hidden">
+                <div class="row">
+                    <div class="col s12">
+                        <div id="joinScreen">
+                            <div class="headerSize" id="tNamePlace"></div>
+                        </div>
+                        <div>
+                            <p id="participants">
+                            <a>Participants: </a></p>
+                            <ol id="signedUp"></ol>
+                        </div>
+                    </div>
+                        <div class="col s12">
+                        <br>
+                        <div class="details" id="startTime">0d 0h 0m 0s</div>
+                        <br>
+                        <a>Join Tournament</a>
+                          <input type="text" placeholder="Enter Name Here" id="playerName">
+                          <button class="waves-effect waves-light btn cdkColor button" type="button" id="enter" onClick="joinTournament()">Join</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <section id="tournamentBracketScreen" class="hidden">
+                    <div id="bracketDiv" class="bracketFramePC"></div>
+            </section>
+            <section id="winnerScreen" class="hidden">
+                <div id="row">
+                    <h1 class="headerSize">Ping Pong Champions</h1>
+                        <table>
+                                <thead>
+                            <tr>
+                                <th class= "name">Tournament Name</th>
+                                 <th class= "name">Winner</th>
+                                <th class= "name" id="winDate">Date of Tournament</th>
+                            </tr>
+                            </thead>
+                            <tbody id="winnerRow"></tbody>
+                        </table>
+                </div>
+            </section>
+            <div class="fixed-action-btn click-to-toggle ">
+                <a id="menu" class="waves-effect waves-light btn btn-floating hidden cdkColor"><i class="fa fa-question" aria-hidden="true""></i></a>
+            </div>
+            
+            <div class="tap-target" data-activates="menu">
+                <div class="tap-target-content">
+                    <p id="instructions">A bunch of text</p>
+                </div>
+            </div>
+        </div>   
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+        <script src="https://use.fontawesome.com/41132a62d5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.12/go.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+        <script src="js/goJSIntegration.js"></script>
+        <script src="js/winnerPage.js"></script>
+        <script src="js/manageTournaments.js"></script>
+
+    </body>
+</html>

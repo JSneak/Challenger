@@ -1,0 +1,110 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.hidden {
+    display: none;}
+.visible {
+    display: block;
+}
+
+.bracketFramePC {
+    border: solid 1px black;
+    background: #53565A;
+    width: 100%;
+    height: calc(100vh - 64px);
+}
+
+.bracketFramePhone{
+    border: solid 1px black;
+    background: #53565A;
+    width: 100%;
+    height: calc(100vh - 56px);
+}
+
+.picker__date-display, .picker__weekday-display{
+    background-color: #A4D65E;
+}
+
+.picker__today,.picker__close{
+    color: #00A9CE);
+}
+
+.picker__clear{
+    color:#8D0e57;
+}
+
+nav{
+    background-color:#82c600;
+}
+
+.cdkColor{
+    background-color:#82c600;
+}
+
+a{
+    font-size:150%;
+    color: black;
+}
+.font{
+    font-size:189%;
+}
+
+.headerSize {
+    font-size:300%;
+    font-weight:500;
+}
+.details {
+    font-size: 120%;
+}
+
+.preloader-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    color: #82c600;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;  
+}
+
+.button:hover {
+    background-color: #A4D65E;
+}
+
+.spinner-custom-only {
+    border-color: #82c600;
+}
+textarea {
+    resize: none;
+    background-color: #ABABAB;
+}
+
+.tap-target {
+    background-color: #82c600;
+}
+
+.tap-target:hover {
+    background-color: #A4D65E;
+}
+
+#instructions {
+    font-size:120%;
+    font-weight:500;
+}
+
+/*
+color: #A4D65E;
+background-color:#619400;
+*/
+/*
+Dividers between each
+*/
+
+/*
+Put stuff into tables
+*/
