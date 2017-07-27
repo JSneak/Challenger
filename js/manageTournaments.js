@@ -4,15 +4,15 @@ index.js
 "use strict";
 
 // Initialize Firebase
-var config = {
-  apiKey: "AIzaSyBy-CYW3EOzYUZLoBR0kYwE9bOFt1pWeEU",
-  authDomain: "ping-pong-tournament-a18d7.firebaseapp.com",
-  databaseURL: "https://ping-pong-tournament-a18d7.firebaseio.com",
-  projectId: "ping-pong-tournament-a18d7",
-  storageBucket: "ping-pong-tournament-a18d7.appspot.com",
-  messagingSenderId: "685269907531"
-};
-firebase.initializeApp(config);
+  var config = {
+    apiKey: "AIzaSyCkugIWgBALhDDweghTdirBWhKpC59dBrs",
+    authDomain: "ping-pong-scheduler.firebaseapp.com",
+    databaseURL: "https://ping-pong-scheduler.firebaseio.com",
+    projectId: "ping-pong-scheduler",
+    storageBucket: "ping-pong-scheduler.appspot.com",
+    messagingSenderId: "890197500377"
+  };
+  firebase.initializeApp(config);
 
 const database = firebase.database();
 const details_firebase_route = "details/";
